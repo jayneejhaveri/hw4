@@ -18,17 +18,17 @@
     
     <nav class="navbar bg-body-tertiary">
     <div class="container-fluid">
-     <a class="navbar-brand" href="/places">Home</a>
+     <a class="navbar-brand" href="/places" class="link-success">Home</a>
     <div>
      
       <% if session[:user_id] %>
        Logged in as: <%= @user["username"] %>
        |
-       <a href="/logout">Logout</a>
+       <a href="/logout" class="link-success">Logout</a>
       <% else %>
-       <a href="/login">Login</a>
+       <a href="/login" class="link-success">Login</a>
        |
-       <a href="/users/new">Signup</a>
+       <a href="/users/new" class="link-success">Signup</a>
       <% end %>
     </div>
     </div>
