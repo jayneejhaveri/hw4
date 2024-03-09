@@ -2,7 +2,7 @@
 
 <form action="/entries" method="post">
   <input type="hidden" name="place_id" value="<%= params["place_id"] %>">
-
+  <input type="hidden" name="user_id" value="<%= params["user_id"] %>">
   <p>
     <label for="title_input">Title</label>
     <input type="text" name="title" id="title_input">
@@ -17,6 +17,11 @@
     <label for="occurred_on_input">Occurred On</label>
     <input type="date" name="occurred_on" id="occurred_on_input">
   </p>
+
+  <div class="mb-3">
+      <label for="uploaded_image_input" class="form-label">Upload Image</label>
+      <input type="file" name="uploaded_image" id="uploaded_image_input" class="form-control">
+  </div>
 
   <button>Save</button>
 </form>
