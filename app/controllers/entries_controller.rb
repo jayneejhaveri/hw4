@@ -2,6 +2,7 @@ class EntriesController < ApplicationController
 
   def new
     @place = Place.find_by({ "id" => params["place_id"] })
+    @entry = Entry.new
     @user = User.find_by({ "id" => session["user_id"] })
   end
 
