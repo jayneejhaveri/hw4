@@ -15,7 +15,8 @@
      <h3><%= entry["title"] %></h3>
      <h4><%= entry["occurred_on"] %></h4>
      <p><%= entry["description"] %></p>
-          <%# conditionally display attached file if post.uploaded_image.attached? %>
+      
+         <%# conditionally display attached file if post.uploaded_image.attached? %>
       <% if entry.uploaded_image.attached? %>
         <%# use url_for(post.uploaded_image) as attached file's url %>
         <img src="<%= url_for(entry.uploaded_image) %>" class="img-fluid">
@@ -23,6 +24,7 @@
         <%# otherwise display original image url from database column %>
         <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Ftaco&psig=AOvVaw3e9a8NHoSFIp4djdiITXm6&ust=1710101969640000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCPDe0LiA6IQDFQAAAAAdAAAAABAE" class="img-fluid">
       <% end %>
+      
     </div>
     </div>
   <% end %>
